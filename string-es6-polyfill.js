@@ -42,11 +42,8 @@
         return res
     }
     proto.padStart = proto.padStart || function(len, filler){
-        if(typeof len !== "number"){
-            throw new TypeError("First parameter should be a number")
-        }
         var str = '' + this
-        len = len - str.length
+        len = +len - str.length
         if(len <= 0) return str
         if(!filler && filler !==0) filler = ' '
         filler = '' + filler
@@ -58,11 +55,8 @@
         return pad + str
     }
     proto.padEnd = proto.padEnd || function(len, filler){
-        if(typeof len !== "number"){
-            throw new TypeError("First parameter should be a number")
-        }
         var str = '' + this
-        len = len - str.length
+        len = +len - str.length
         if(len <= 0) return str
         if(!filler && filler !==0) filler = ' '
         filler = '' + filler
