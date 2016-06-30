@@ -51,13 +51,33 @@
         if(typeof len !== "number"){
             throw new TypeError("First parameter should be a number")
         }
-        //...
+        var str = '' + this
+        len = len - str.length
+        if(len <= 0) return str
+        if(!filler && filler !==0) filler = ' '
+        filler = '' + filler
+        var pad = ''
+        while(pad.length < len){
+            pad += filler
+        }
+        pad = pad.substring(0, len)
+        return pad + str
     }
     proto.padEnd = proto.padEnd || function(len, filler){
         if(typeof len !== "number"){
             throw new TypeError("First parameter should be a number")
         }
-        //...
+        var str = '' + this
+        len = len - str.length
+        if(len <= 0) return str
+        if(!filler && filler !==0) filler = ' '
+        filler = '' + filler
+        var pad = ''
+        while(pad.length < len){
+            pad += filler
+        }
+        pad = pad.substring(0, len)
+        return str + pad
     }
 })(typeof window !== 'undefined'?window:global)
 

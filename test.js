@@ -31,3 +31,18 @@ test('repeat', function(t){
   t.equal('foo'.repeat(4), 'foofoofoofoo')
   t.equal(''.repeat(2), '')
 })
+
+test('pad start', function(t){
+  t.plan(3)
+  t.equal('x'.padStart(5, 'abc'), 'abcax')
+  t.equal('foobar'.padStart(4, '0'), 'foobar')
+  t.equal('d'.padStart(10), '         d')
+})
+
+test('pad end', function(t){
+  t.plan(3)
+  t.equal('x'.padEnd(5, 'abc'), 'xabca')
+  t.equal('foobar'.padEnd(4, '0'), 'foobar')
+  t.equal('d'.padEnd(10), 'd         ')
+})
+
