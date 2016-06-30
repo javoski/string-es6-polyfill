@@ -1,0 +1,15 @@
+{
+  "name": "string-es6-polyfill",
+  "version": "1.0.0",
+  "description": "",
+  "main": "string-es6-polyfill.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "es6",
+    "polyfill"
+  ],
+  "author": "xujiongbo",
+  "license": "MIT"
+}
