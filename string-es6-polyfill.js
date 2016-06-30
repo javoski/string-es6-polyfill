@@ -1,4 +1,4 @@
-(function(root){
+;(function(root){
     'use strict'
     var proto = root.String.prototype
     proto.at = proto.at || function(pos){
@@ -23,9 +23,8 @@
         return (new RegExp(sub + '$')).test(this)
     }
     proto.repeat = proto.repeat || function(count){
-        if(typeof count !== "number"){
-            throw new TypeError("Parameter should be a number")
-        }else if (count < 0){
+        count = +count
+        if (count < 0){
             throw new RangeError('Repeat count must be non-negative');
         }else if (count === Infinity){
             throw new RangeError('Repeat count must be less than infinity');
@@ -52,7 +51,6 @@
         if(typeof len !== "number"){
             throw new TypeError("First parameter should be a number")
         }
-
         //...
     }
     proto.padEnd = proto.padEnd || function(len, filler){
@@ -61,4 +59,5 @@
         }
         //...
     }
-})(window || global)
+})(typeof window !== 'undefined'?window:global)
+

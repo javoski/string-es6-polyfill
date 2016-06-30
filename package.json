@@ -4,12 +4,15 @@
   "description": "String polyfill methods for ES6/7 specification",
   "main": "string-es6-polyfill.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test"
   },
   "keywords": [
     "es6",
     "polyfill"
   ],
   "author": "xujiongbo",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^4.6.0"
+  }
 }
