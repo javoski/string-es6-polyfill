@@ -4,23 +4,17 @@
     proto.at = proto.at || function(pos){
         //...
     }
-    proto.includes = proto.includes || function(sub){
-        if(typeof sub !== "string"){
-            throw new TypeError("Parameter should be a string")
-        }
-        return (new RegExp(sub)).test(this)
+    proto.includes = proto.includes || function(substr){
+        substr = '' + substr
+        return (new RegExp(substr)).test(this)
     }
-    proto.startsWith = proto.startsWith || function(sub){
-        if(typeof sub !== "string"){
-            throw new TypeError("Parameter should be a string")
-        }
-        return (new RegExp('^' + sub)).test(this)
+    proto.startsWith = proto.startsWith || function(substr){
+        substr = '' + substr
+        return (new RegExp('^' + substr)).test(this)
     }
-    proto.endsWith = proto.endsWith || function(sub){
-        if(typeof sub !== "string"){
-            throw new TypeError("Parameter should be a string")
-        }
-        return (new RegExp(sub + '$')).test(this)
+    proto.endsWith = proto.endsWith || function(substr){
+        substr = '' + substr
+        return (new RegExp(substr + '$')).test(this)
     }
     proto.repeat = proto.repeat || function(count){
         count = +count
@@ -34,7 +28,7 @@
         if(this.length === 0 || count === 0){
             return ''
         }
-        var res = str
+        var res = ''
         while(true){
             if((count & 1) === 1){
                 res += str
