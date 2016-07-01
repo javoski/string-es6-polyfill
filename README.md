@@ -1,4 +1,4 @@
-### String polyfill methods for ES6/7 specification
+#### String polyfill methods for ES6/7 specification
 * includes (ES6)
 * startsWith (ES6)
 * endsWith (ES6)
