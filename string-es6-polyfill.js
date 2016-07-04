@@ -1,9 +1,6 @@
 ;(function(root){
     'use strict'
     var proto = root.String.prototype
-    proto.at = proto.at || function(pos){
-        //...
-    }
     proto.includes = proto.includes || function(substr){
         substr = '' + substr
         return (new RegExp(substr)).test(this)
