@@ -64,5 +64,5 @@
         pad = pad.substring(0, len)
         return str + pad
     }
-})(typeof window !== 'undefined'?window:global)
+})(this)
 
